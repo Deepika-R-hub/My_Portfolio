@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 280 20% 98%;
+    --foreground: 270 50% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 270 50% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 50% 15%;
+
+    --primary: 340 100% 86%;
+    --primary-foreground: 270 50% 20%;
+
+    --secondary: 253 100% 86%;
+    --secondary-foreground: 270 50% 20%;
+
+    --muted: 270 20% 95%;
+    --muted-foreground: 270 20% 40%;
+
+    --accent: 174 70% 69%;
+    --accent-foreground: 174 70% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 270 30% 90%;
+    --input: 270 30% 90%;
+    --ring: 340 100% 75%;
+
+    --radius: 1rem;
+
+    /* Custom colors */
+    --pink: 340 100% 86%;
+    --pink-glow: 340 100% 75%;
+    --lavender: 253 100% 86%;
+    --lavender-glow: 253 100% 75%;
+    --teal: 174 70% 69%;
+    --teal-glow: 174 70% 60%;
+    --purple: 270 60% 60%;
+    --purple-glow: 270 60% 50%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(340 100% 86%), hsl(253 100% 86%));
+    --gradient-accent: linear-gradient(135deg, hsl(253 100% 86%), hsl(174 70% 69%));
+    --gradient-hero: linear-gradient(135deg, hsl(340 100% 95%), hsl(253 100% 95%), hsl(174 70% 95%));
+    --gradient-glow: linear-gradient(135deg, hsl(340 100% 75% / 0.5), hsl(253 100% 75% / 0.5));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(270 50% 50% / 0.15);
+    --shadow-glow-pink: 0 0 40px hsl(340 100% 75% / 0.4);
+    --shadow-glow-lavender: 0 0 40px hsl(253 100% 75% / 0.4);
+    --shadow-glow-teal: 0 0 40px hsl(174 70% 60% / 0.4);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 270 30% 8%;
+    --foreground: 270 20% 95%;
+
+    --card: 270 30% 12%;
+    --card-foreground: 270 20% 95%;
+
+    --popover: 270 30% 12%;
+    --popover-foreground: 270 20% 95%;
+
+    --primary: 340 100% 75%;
+    --primary-foreground: 270 50% 10%;
+
+    --secondary: 253 80% 70%;
+    --secondary-foreground: 270 50% 10%;
+
+    --muted: 270 30% 20%;
+    --muted-foreground: 270 20% 70%;
+
+    --accent: 174 70% 50%;
+    --accent-foreground: 174 70% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 270 30% 20%;
+    --input: 270 30% 20%;
+    --ring: 340 100% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sora antialiased;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/60 backdrop-blur-xl border border-white/30 shadow-lg;
+  }
+
+  .glass-dark {
+    @apply bg-black/20 backdrop-blur-xl border border-white/10;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .gradient-text-accent {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-accent);
+  }
+
+  .glow-pink {
+    box-shadow: var(--shadow-glow-pink);
+  }
+
+  .glow-lavender {
+    box-shadow: var(--shadow-glow-lavender);
+  }
+
+  .glow-teal {
+    box-shadow: var(--shadow-glow-teal);
+  }
+
+  .gradient-border {
+    @apply relative;
+    background: linear-gradient(var(--background), var(--background)) padding-box,
+                var(--gradient-primary) border-box;
+    border: 2px solid transparent;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 rounded-full font-medium transition-all duration-300 ease-out;
+    background: var(--gradient-primary);
+    @apply text-foreground hover:scale-105 hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 rounded-full font-medium transition-all duration-300 ease-out;
+    @apply border-2 border-primary text-foreground hover:bg-primary/10 hover:scale-105;
+  }
+
+  .skill-badge {
+    @apply px-4 py-2 rounded-full text-sm font-medium transition-all duration-300;
+    @apply border border-primary/30 bg-primary/10 text-foreground;
+    @apply hover:border-primary hover:bg-primary/20 hover:shadow-md;
+  }
+
+  .project-card {
+    @apply rounded-2xl overflow-hidden transition-all duration-500 ease-out;
+    @apply glass hover:scale-[1.02] hover:shadow-xl;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-muted-foreground text-lg max-w-2xl;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(340 100% 75% / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(340 100% 75% / 0.6);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
