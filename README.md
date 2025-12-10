@@ -1,73 +1,53 @@
-# Welcome to your Lovable project
+🌐 My Portfolio
 
-## Project info
+A modern and responsive personal portfolio website designed to showcase my skills, projects, and professional journey. This portfolio reflects my passion for clean UI, intuitive user experience, and efficient development practices.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+🚀 Features
 
-## How can I edit this code?
+Modern & Minimalistic Design
+Built with a clean layout and smooth flow to highlight essential information effectively.
 
-There are several ways of editing your application.
+Responsive UI
+Fully optimized for all screen sizes — mobile, tablet, and desktop.
 
-**Use Lovable**
+Interactive Sections
+Includes About, Skills, Projects, and Contact sections with a user-friendly interface.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Fast & Efficient
+Lightweight structure ensures quick loading and smooth navigation.
 
-Changes made via Lovable will be committed automatically to this repo.
+🛠️ Tech Stack
 
-**Use your preferred IDE**
+Frontend: HTML, CSS, JavaScript
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Animations: CSS animation / Scroll effects
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Deployment: GitHub Pages
 
-Follow these steps:
+📁 Project Structure
+My_Portfolio/
+│── assets/
+│── css/
+│── js/
+│── index.html
+│── README.md
+│── ...
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+📸 Preview
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+You can view the live portfolio here:
+👉 Add your deployed link here once hosted
 
-# Step 3: Install the necessary dependencies.
-npm i
+📬 Contact
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+If you’d like to connect, feel free to reach out!
 
-**Edit a file directly in GitHub**
+GitHub: https://github.com/Deepika-R-hub
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+LinkedIn: Add your LinkedIn link here
 
-**Use GitHub Codespaces**
+Email: Add your email here
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+⭐ Show Your Support
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+If you like this project, please give it a ⭐ on GitHub — it motivates me to build more!
