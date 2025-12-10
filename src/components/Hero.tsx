@@ -26,7 +26,10 @@ const Hero = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Hello, I'm
               <br />
-              <span className="gradient-text">Deepika R</span>
+              <span className="gradient-text">
+                <i className="fa-duotone fa-solid fa-user-graduate fa-spin fa-spin-reverse" style={{ "--fa-primary-color": "#B197FC", "--fa-secondary-color": "#B197FC" }}></i>
+                Deepika R
+              </span>
             </h1>
 
             <h2 className="text-xl md:text-2xl font-medium text-muted-foreground mb-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
